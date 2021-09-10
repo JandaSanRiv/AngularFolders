@@ -1,0 +1,41 @@
+div#divNumbers {
+  width: 500px;
+  padding: 1em;
+  margin: 5px;
+  color: #901676;
+  background-color: #eccdea;
+  border: 1px solid #92828aad;
+}
+
+label.lblInput {
+    margin-right: 5px;
+    font-weight: bold;
+}
+label#lblResultado {
+  color: #1c41c5;
+  font-weight: bold;
+}
+
+div#divOperaciones {
+  color: #c1174f;
+  font-style: italic;
+}
+
+span#spSigno {
+  color: #c1174f;
+  font-weight: bolder;
+}
+
+button#btnCalcular{
+  border: 1px solid #e461ec;
+  border-radius: 2px;
+  background-color: #f5aff3;
+  font-weight: bold;
+  padding: 5px;
+  margin: 1px;
+  color: #c1174f;
+}
+
+.divRbOpe {
+  display: inline-block;
+}

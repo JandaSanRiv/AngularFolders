@@ -1,0 +1,33 @@
+<div class="divInput">
+  <button class="btn" id="btnAgregar" (click)="agregarProducto()">Agregar producto</button>
+</div>
+     <p id="pLiProds">Lista de Productos</p>
+<!-- <ol id="liProds"></ol> -->
+
+<div is="divListaProds">
+  <table id="tblProds">
+    <thead>
+      <tr>
+        <th class="thProd">Producto</th>
+        <th class="thPrecio">Precio</th>
+      </tr>
+
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let producto of listaProds">
+      <td class="tdProd">{{producto.nombre}}</td>
+      <td class="tdPrecio">{{producto.precio}}</td>
+    </tr>
+    <tr id="trTotal" >
+      <td>Total</td>
+      <td id="tdTotal">{{calcularTotal()}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="divInput">
+    <!-- <button class="btn" id="btnAgregar" (click)="muestraProductos()">Mostrar Productos</button> -->
+    <button class="btn divBtn" id="btnFinalizar" (click)="finalizarOrden()">Finalizar orden</button>
+  </div>
+</div>
+

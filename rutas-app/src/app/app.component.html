@@ -1,0 +1,8 @@
+<nav>
+  <a routerLink="/uno" class="aRLink">Primer Componente</a>
+  <a routerLink="/dos" class="aRLink">Segundo Componente</a>
+  <a [routerLink]="['/dos',1]" class="aRLink">Segundo Componente con 1</a>
+  <a [routerLink]="['/dos',2]" class="aRLink">Segundo Componente con 2</a>
+  <a routerLink="/tres" class="aRLink">Tercer Componente</a>
+</nav>
+<router-outlet></router-outlet>

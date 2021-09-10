@@ -1,0 +1,35 @@
+<div id="divInputFact">
+  <p class="pTit">agregar Nota</p>
+  <button class="btn" id="btnVolver" (click)="hola()" >Agregar</button>
+  <div class="divElem">
+    <div class="divInput divSubEnc">
+      <label class="lblSubEnc" for="txtId">Agregar una Nota</label>
+    </div>
+    <div class="divInput hide">
+      <label class="lblInput" for="txtId">Id</label>
+      <input type="string" class="txtInput" id="txtId" [(ngModel)]="id">
+    </div>
+    <div class="divInput">
+      <label class="lblInput" for="txtTitulo">Titulo</label>
+      <input type="string" class="txtInput" id="txtTitulo" [(ngModel)]="title">
+    </div>
+    <div class="divInput">
+      <label class="lblInput" for="txtContenido">Contenido</label>
+      <input type="string" class="txtInput" id="txtContenido" [(ngModel)]="content">
+    </div>
+    <div class="divInput hide">
+      <label class="lblInput" for="txtFechaCreacion">Fecha de creaci&oacute;n</label>
+      <input type="number" class="txtInput" id="txtFechaCreacion" [(ngModel)]="createdAt">
+    </div>
+    <div class="divInput hide">
+      <label class="lblInput" for="txtFechaActualizacion">Fecha de actualizaci&oacute;n</label>
+      <input type="number" class="txtInput" id="txtFechaActualizacion" [(ngModel)]="updatedAt">
+    </div>
+    <div class="divBtn">
+      <button class="btn" id="btnAgregar" (click)="addNote()">Agregar</button>
+    </div>
+    <div class="divBtn">
+      <!-- <button class="btn" id="btnModificar" (click)="editNote()">Modificar</button> -->
+    </div>
+  </div>
+</div>

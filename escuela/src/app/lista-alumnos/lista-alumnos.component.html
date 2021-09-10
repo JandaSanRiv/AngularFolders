@@ -1,0 +1,46 @@
+<p  class="pTit">Lista de Alumnos</p>
+<div id="divRbs">
+  <span class="spTexto">Selecciona el tipo de vista:</span>
+  <div id="{{'divRb'+salida.id}}" *ngFor="let salida of tiposSalidas; index as myIndex" class="divRb">
+    <input type="radio" id="{{salida.id}}" name="salida" class="{{salida.id}} rbTipoSalida" [(ngModel)]="salidaActual" (change)="revisarValor()" value="{{salida.id}}" />{{salida.text}}
+    <!-- [checked]="salida.checked"  -->
+  </div>
+</div>
+<div id="divAlumnos">
+  <div id="divTabla" *ngIf="salidaActual === 'rbTabla'; else lista">
+
+    <table id="tblAlumnos" class="tblTable">
+      <thead>
+        <tr>
+        <th class="thIdx"></th>
+        <th class="thNombre">Nombre</th>
+        <th class="thApellidos">Apellidos</th>
+        <th class="thCorreoE">Correo electr&oacute;nico</th>
+        <th class="thFechaIng">Fecha Ingreso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alumno of listaALumnos; index as myIndex" class="trAlumno" id="{{'tr'+myIndex}}">
+        <td class="tdIdx"></td>
+        <td class="tdNombre">{{alumno.nombre}}</td>
+        <td class="tdApellidos">{{alumno.apellidos}}</td>
+        <td class="tdCorreoE">{{alumno.correoE}}</td>
+        <td class="tdFechaIng">{{alumno.fechaIngreso | date:'dd/mm/yyyy'}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #lista>
+    <ol id="olAlumnos">
+      <li *ngFor="let alumno of listaALumnos; index as myIndex" class="liAlumno" id="{{'li'+myIndex}}">
+        <span class="spField">Nombre:</span>{{alumno.nombre}}
+        &nbsp; <span class="spField">Apellidos:</span>{{alumno.apellidos}}
+        &nbsp; <span class="spField">Correo electr&oacute;nico:</span>{{alumno.correoE}}
+        &nbsp; <span class="spField">Fecha de ingreso:</span>{{alumno.fechaIngreso | date:'dd/mm/yyyy'}}
+      </li>
+    </ol>
+    </ng-template>
+
+</div>

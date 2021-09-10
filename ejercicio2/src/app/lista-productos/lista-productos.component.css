@@ -1,0 +1,52 @@
+button#btnAgregar {
+  float: right;
+  border: 1px solid #563b56db;
+  border-radius: 4px;
+  background-color: #208bab;
+  color: white;
+  padding: 6px;
+}
+
+table#tblProds {
+  width: 80%;
+  background-color: #cbe6cb;
+  color: #5a675a;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table#tblProds td {
+  border: 1px solid green;
+  border: 1px solid #9ebb9e;
+}
+table#tblProds th {
+  background-color: #275361;
+  border: 1px solid #d5dcd5;
+  color: aliceblue;
+}
+
+tr#trTotal {
+  background-color: #fffceb;
+  color: #374037;
+  font-weight: bold;
+}
+
+td#tdTotal {
+  color: #4ba23b;
+  text-align: right;
+}
+td.tdPrecio {
+  text-align: right;
+}
+
+button#btnFinalizar {
+  border: 1px solid #563b56db;
+  border-radius: 4px;
+  background-color: #d3dadc;
+  color: #228077;
+  padding: 6px;
+  margin: 4px;
+  font-weight: bold;
+}
+.divInput.divBtn {
+  text-align: center;
+}

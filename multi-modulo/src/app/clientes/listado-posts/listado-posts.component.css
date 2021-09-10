@@ -1,0 +1,24 @@
+#listaPosts{
+  max-height: 200px;
+  overflow: auto;
+  background-color: #fbf0a4;
+  color: #9e410b;
+}
+
+
+li:nth-child(odd) {
+  background-color: #f9f7e7;
+  }
+  li:nth-child(even) {
+  background-color: #f5f3da;
+  }
+
+  #divPosts{
+    background-color: #7dcfff;
+  }
+  .pTit{
+
+  color: #733d0f;
+  font-weight: bold;
+  padding: 6px;
+}

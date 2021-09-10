@@ -1,0 +1,22 @@
+a.aRLink {
+  margin-right: 13px;
+  color: #e030cb;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fff3f345;
+  text-decoration: none;
+}
+nav {
+  background-color: #f7d5e6;
+  padding: 8px;
+  box-shadow: -5px 4px 4px -3px rgba(207,194,207,0.87);
+  -webkit-box-shadow: -5px 4px 4px -3px rgba(207,194,207,0.87);
+  -moz-box-shadow: -5px 4px 4px -3px rgba(207,194,207,0.87);
+}
+
+a.aRLink:hover {
+    color: #9953da;
+    background: #e6e6fac9;
+    text-decoration: none;
+}
+

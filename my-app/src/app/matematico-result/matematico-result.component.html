@@ -1,0 +1,10 @@
+<!--resultadoAMostrar es una variable tipo Input, que se asigna en este caso en el app.component.html-->
+<!-- <p *ngIf="resultadoAMostrar" !=0>Valor recibido del componente matematico: {{resultadoAMostrar}} </p> -->
+<p *ngIf="resultadoAMostrar !=0">Valor recibido del componente matematico: {{resultadoAMostrar | currency}} </p>
+<input type="button" id="btnLimpiarDatos" (click)="limpiarCajas.emit()" value="Limpiar" class="btnOpe">
+
+<p [hidden]="resultadoAMostrar >0">Es numero negativo</p>
+<p *ngIf="resultadoAMostrar < 0; else positivo">{{resultadoAMostrar}} holis resultado</p>
+  <ng-template #positivo>
+  <p>Es positivo iiii</p>
+  </ng-template>

@@ -1,0 +1,53 @@
+li.liAlumno {
+  color: #203f48;
+  background-color: #ddecff;
+}
+
+span.spField {
+  padding-left: 10px;
+  padding-right: 4px;
+  color: #177fd8;
+  font-weight: bold;
+}
+
+ol#olAlumnos {
+  background-color: #d3dff5;
+  border: 1px solid #bae0f3;
+}
+table#tblAlumnos {
+  background-color: #ddecff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  width: 50%;
+  max-width: 750px;
+  min-width: 400px;
+}
+
+#tblAlumnos thead {
+  color: #177fd8;
+  background-color: #d3dff5;    
+  border: 1px solid #b6c6f3;
+}
+
+table#tblAlumnos td {
+  border: 1px solid #b6c6f3;
+  color: #41509a;
+}
+
+div.divRb {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 7px;
+  color: #2e3a8e;
+  font-weight: bold;
+}
+div#divAlumnos {
+  margin: 10px;
+}
+
+span.spTexto {
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+  display: block;
+}

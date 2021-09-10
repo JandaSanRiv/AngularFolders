@@ -1,0 +1,83 @@
+<p>notes works!</p>
+<div id="divNotas">
+  <p class="pTit">Lista de Notas</p>
+  <!-- <ol id="listaPosts">
+    <li *ngFor="let note of notes">
+      {{note._id}} - {{note.title}} -<br> {{note.content}}
+    </li>
+
+  </ol> -->
+
+  <div id="divTools">
+    <!-- <div class="divBtn">
+      <button class="btn" id="btnAgregar" (click)="agregarNotas()">Agregar</button>
+    </div> -->
+  </div>
+  <div id="divInputFact">
+    <div class="divElem">
+      <!-- <div class="divSearch">
+        <label class="lblInput" id="lblBuscar" for="txtFacBuscar">Buscar por Id de factura</label>
+        <input type="text" class="txtInput" id="txtFacBuscar" [(ngModel)]="idFac">
+        <button class="btn" id="btnBuscar" (click)="buscarFactura()">Buscar</button>
+      </div> -->
+      <div class="divInput divSubEnc">
+        <label class="lblSubEnc" for="txtId">Agregar una Nota</label>
+      </div>
+      <div class="divInput hide">
+        <label class="lblInput" for="txtId">Id</label>
+        <input type="string" class="txtInput" id="txtId" [(ngModel)]="id">
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtTitulo">Titulo</label>
+        <input type="string" class="txtInput" id="txtTitulo" [(ngModel)]="title">
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtContenido">Contenido</label>
+        <input type="string" class="txtInput" id="txtContenido" [(ngModel)]="content">
+      </div>
+      <div class="divInput hide">
+        <label class="lblInput" for="txtFechaCreacion">Fecha de creaci&oacute;n</label>
+        <input type="number" class="txtInput" id="txtFechaCreacion" [(ngModel)]="createdAt">
+      </div>
+      <div class="divInput hide">
+        <label class="lblInput" for="txtFechaActualizacion">Fecha de actualizaci&oacute;n</label>
+        <input type="number" class="txtInput" id="txtFechaActualizacion" [(ngModel)]="updatedAt">
+      </div>
+      <div class="divBtn">
+        <button class="btn" id="btnAgregar" (click)="addNote()">Agregar</button>
+      </div>
+      <div class="divBtn">
+        <button class="btn" id="btnModificar" (click)="editNote()">Modificar</button>
+      </div>
+    </div>
+  </div>
+  <div class="divTable">
+    <table id="tblNotas">
+      <thead>
+        <tr>
+          <th class="thId">Id</th>
+          <th class="thTitulo">Titulo</th>
+          <th class="thContenido">Contenido</th>
+          <th class="thFechaCreacion">Fecha de creaci&oacute;n</th>
+          <th class="thFechaActualizacion">Fecha de actualizaci&oacute;n</th>
+          <th class="thButtons"></th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr *ngFor="let note of notes; index as idx">
+            <td class="tdId" #tdId>{{note._id}}</td>
+            <td class="tdTitulo" #tdTitulo>{{note.title}}</td>
+            <td class="tdContenido" #tdContenido>{{note.content}}</td>
+            <td class="tdFechaCreacion" #tdFechaCreacion>{{note.updatedAt}}</td>
+            <td class="tdFechaActualizacion" #tdFechaActualizacion>{{note.createdAt}}</td>
+            <td class="thButtons">
+              <!-- <button class="btn btnSelEditar" id="{{'btnSelEditar'+index}}" (click)="selectEdit(tdId.text, tdTitulo.text, tdContenido.text)">Editar</button> -->
+              <button class="btn btnSelEditar" id="{{'btnSelEditar'+index}}" (click)="selectEdit(note._id, note.title, note.content)">Editar</button>
+              <button class="btn btnEliminar" id="{{'btnEliminar'+index}}" (click)="deleteNote(note._id)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <p class="pTit"> Notas totales: {{notes.length}}</p>
+</div>

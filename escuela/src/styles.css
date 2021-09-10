@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+p.pTit {
+  /* color: #208bab; */
+  color: #d845bf;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 3px;
+}
+
+.divTit {
+  color: white;
+  font-weight: bolder;
+  font-size: 23px;
+  background-color: #151767;
+  padding: 5px;
+  text-align: center;
+}

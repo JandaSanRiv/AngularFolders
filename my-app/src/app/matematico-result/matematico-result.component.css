@@ -1,0 +1,10 @@
+
+#btnLimpiarDatos {
+  border: 1px solid #7d787d;
+  border-radius: 2px;
+  background-color: #e2e2e2;
+  font-weight: bold;
+  padding: 5px;
+  margin: 1px;
+  color: #774657;
+}

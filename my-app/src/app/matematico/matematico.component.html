@@ -1,0 +1,57 @@
+<title>{{ title }} </title>
+
+<div class="content" role="main">
+  <h2>Operaciones num&eacute;ricas b&aacute;sicas</h2>
+
+  <p *ngIf="userName === null || userName === ''; else loggedOn"></p>
+  <ng-template #loggedOn>
+    <p>El usuario <u>{{userName | slice:0:1 | uppercase }}{{userName | slice:1 | lowercase}}</u> esta logueado correctamente</p>
+    <p>{{'hello angular 10' | uppercase}}</p>
+  </ng-template>
+  <p>Fecha de hoy: {{today | date:'fullDate'}}</p>
+  <div id="divNumbers">
+    <div class="formInput">
+      <label for="txtNum1" class="lblInput">Numero 1</label>
+      <input type="number" id="txtNum1" class="txtInput" [(ngModel)]="num1" (keyup)="calcular()" />
+    </div>
+    <span id="spSigno">{{signo}}</span>
+    <div class="formInput">
+      <label for="txtNum2" class="lblInput">Numero 2</label>
+      <input type="number" id="txtNum2" class="txtInput" [(ngModel)]="num2" (keyup)="calcular()" />
+    </div>
+    <div>
+      <div class="formInput">
+        <label for="txtNum2" class="lblInput">Resultado</label>
+        <input type="text" id="txtRespuesta" class="txtInput" readonly [value]="resultado" />
+      </div>
+
+      <p>{{operaciones | slice:1:3}}</p>
+
+      <!-- <div id="divOperaciones">
+        <label id="lblResultado" for="operation">Operacion a realizar:</label>
+        <input type="radio" id="suma" value="suma" name="operation" [(ngModel)]="operacion"
+          (change)="calcular()" class="rbOper" />Suma&nbsp;
+        <input type="radio" id="resta" value="resta" name="operation" [(ngModel)]="operacion"
+          (change)="calcular()" class="rbOper"  />Resta&nbsp;
+        <input type="radio" id="multiplicacion" value="multiplicacion" name="operation" [(ngModel)]="operacion"
+          (change)="calcular()" class="rbOper"  />Multiplicacion&nbsp;
+        <input type="radio" id="division" value="division" name="operation" [(ngModel)]="operacion"
+          (change)="calcular()" class="rbOper"  />division&nbsp;
+      </div> -->
+      <div id="divOperacionesngFor">
+        <label id="lblResultado" for="operation">Operacion a realizar:</label>
+        <div *ngFor="let oper of operacionesJSON; index as myIndex" class="divRbOpe"> <!--No ocupe el index, pero solo para indicar como va-->
+          <input type="radio" id="{{oper.id}}" value="{{oper.id}}" name="operation" [(ngModel)]="operacion"
+          (change)="calcular()" class="rbOper" />{{oper.text}}&nbsp;
+        </div>
+       
+      </div>
+    </div>
+    <div>
+      <button id="btnCalcular" (click)="calcular()" class="btnOpe">Calcular</button>
+      <!--Se manda llamar el componente de resultados pasandole como parametro el valor de resultado
+        al componente matematico-result se le esta asignando el valor para resultadoAMostrar la variable del app.component.ts test -->
+      <div class="divResultado"><app-matematico-result (limpiarCajas)="limpiarCajas()" [resultadoAMostrar]="resultado"></app-matematico-result></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+div#divFacturas{
+
+  /* background-color: #ecf0f7; */
+  background-color: #f7eaf4;
+    border: 1px solid #67808c;
+    padding: 7px;
+    width: 80%;
+    max-width: 650px;
+    min-width: 500px;
+}
+
+p.pTit {
+  /* color: #208bab; */
+  color: #d845bf;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 3px;
+}
+li.liCliente {
+  color: #1c63a0;
+  font-weight: bold;
+}

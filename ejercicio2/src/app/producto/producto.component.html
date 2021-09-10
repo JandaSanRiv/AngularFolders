@@ -1,0 +1,25 @@
+<div class="mainDiv">
+  <div class="encProducto">
+    <p id="pTit" >Compras</p>
+  </div>
+  <p id="pInstructions" >Ingresa un producto</p>
+
+    <div id="divBody">
+      <div class="divProducto">
+        <div class="divInput">
+          <label for="txtProd" class="lblInput">Producto: </label>
+          <input id="txtProd" class="txtInput" [(ngModel)]= "producto">
+        </div>
+        <div class="divInput">
+          <label for="txtPrecio" class="lblInput">Precio: </label>
+          <input id="txtPrecio" class="txtInput"[(ngModel)]= "precio">
+        </div>
+      </div>
+      <div id="divCompProds">
+  
+        <app-lista-productos [producto]="producto" [precio]="precio"  (ordenFinalizada)="orderFinalizadaHandler($event)" (totalEvent)="totalEventHandler($event)" [dato]='3'></app-lista-productos>
+      </div>
+    </div>
+
+
+</div>

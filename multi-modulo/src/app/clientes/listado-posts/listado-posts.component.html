@@ -1,0 +1,10 @@
+<div id="divPosts">
+  <p class="pTit">Lista de Posts</p>
+  <p class="pTit"> Cantidad de posts recibidos: {{posts.length}}</p>
+  <ol id="listaPosts">
+    <li *ngFor="let post of posts">
+      {{post.id}} - {{post.title}} -<br> {{post.body}}
+    </li>
+
+  </ol>
+</div>

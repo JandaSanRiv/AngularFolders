@@ -1,0 +1,9 @@
+<div id="divFacturas">
+
+  <p class="pTit">Listado Clientes</p>
+  <ol id="olClientes">
+    <li *ngFor="let cliente of clientes" class="liCliente">{{cliente.id}} - {{cliente.name}} - {{cliente.email}}</li>
+  </ol>
+</div>
+<p>Posts</p>
+<app-listado-posts></app-listado-posts>

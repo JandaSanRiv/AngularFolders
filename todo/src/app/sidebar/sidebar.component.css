@@ -1,0 +1,14 @@
+p {
+  color: #399bff;
+}
+
+
+.seleccionado{
+  background-color: yellow;
+  color:red;
+}
+
+
+.otro{
+  font-weight:bolder;
+}

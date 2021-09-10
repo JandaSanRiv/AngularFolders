@@ -1,0 +1,13 @@
+<br>
+<p>sidebar works!</p>
+<h4>{{dato1}}</h4>
+<br>
+<h1>Accede a nuestras mejores ofertas del anio!</h1>
+<h3>No esperes mas, porque se acaban!</h3>
+<p>Oferta valida solo para las primeras 1,000 unidades vendidas.</p>
+<p [innerText]="dato1"></p>
+<label [innerText]="'Ingresa el '+idSideName"></label>
+<input type="text" [value]="idSide" >
+<p [class.seleccionado]="estaSeleccionado">Este texto puede o no ser seleccionado</p>
+<p [class]="misClasses" class="saludos"> Texto configurado con estilos</p>
+Seleccionado: <input type="checkbox" id="seleccionadoONo" [(ngModel)]="estaSeleccionado" (change)="checkboxChanged()"/>

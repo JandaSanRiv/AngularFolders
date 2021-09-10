@@ -1,0 +1,56 @@
+<div id="divFacturas">
+  <p class="pTit">Facturas</p>
+  <div id="divInputFact">
+    <div class="divElem">
+      <div class="divSearch">
+        <label class="lblInput" id="lblBuscar" for="txtFacBuscar">Buscar por Id de factura</label>
+        <input type="text" class="txtInput" id="txtFacBuscar" [(ngModel)]="idFac">
+        <button class="btn" id="btnBuscar" (click)="buscarFactura()">Buscar</button>
+      </div>
+      <div class="divInput divSubEnc">
+        <label class="lblSubEnc" for="txtId">Agregar una factura</label>
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtId">Id</label>
+        <input type="number" class="txtInput" id="txtId" [(ngModel)]="id">
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtFecha">Fecha</label>
+        <input type="date" class="txtInput" id="txtFecha" [(ngModel)]="fecha">
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtCliente">Cliente</label>
+        <input type="number" class="txtInput" id="txtCliente" [(ngModel)]="cliente">
+      </div>
+      <div class="divInput">
+        <label class="lblInput" for="txtMonto">Monto</label>
+        <input type="number" class="txtInput" id="txtMonto" [(ngModel)]="monto">
+      </div>
+      <div class="divBtn">
+        <button class="btn" id="btnAgregar" (click)="agregarFacturas()">Agregar</button>
+      </div>
+    </div>
+  </div>
+  <div class="divTable">
+    <table id="tblFacturas">
+      <thead>
+        <tr>
+          <th class="thId">Id</th>
+          <th class="thFecha">Fecha</th>
+          <th class="thCliente">Cliente</th>
+          <th class="thMonto">Monto</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tbody>
+        <tr *ngFor="let factura of facturas">
+          <td class="tdId">{{factura.id}}</td>
+          <td class="tdFecha">{{factura.fecha}}</td>
+          <td class="tdCliente">{{factura.cliente}}</td>
+          <td class="tdMonto">{{factura.monto}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

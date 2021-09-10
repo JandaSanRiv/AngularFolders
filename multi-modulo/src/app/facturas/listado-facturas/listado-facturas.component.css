@@ -1,0 +1,117 @@
+table#tblFacturas {
+  background-color: #ddecff;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 750px;
+  min-width: 400px;
+  margin-top: 9px;
+}
+
+table#tblFacturas thead {
+  color: #177fd8;
+  background-color: #d3dff5;
+  border: 1px solid #b6c6f3
+}
+
+table#tblFacturas td {
+  border: 1px solid #b6c6f3;
+  color: #41509a;
+}
+
+.divElem {
+  border: 1px dashed #a5b4d0;
+  padding: 4px;
+  margin: 5px;
+}
+
+#divFacturas{
+  background-color: #ecf0f7;
+    border: 1px solid #67808c;
+    padding: 7px;
+    width: 80%;
+    max-width: 650px;
+    min-width: 500px;
+}
+button#btnAgregar{
+  border: 1px solid #563b56db;
+  border-radius: 4px;
+  background-color: #208bab;
+  color: white;
+  padding: 6px;
+  margin-top: 6px;
+}
+div.divBtn{
+  text-align: center;
+}
+
+button#btnBuscar {
+  border: 1px solid #563b56db;
+  border-radius: 4px;
+  background-color: #d3dadc;
+  color: #228077;
+  padding: 6px;
+  margin: 4px;
+  font-weight: bold;
+}
+
+
+p.pTit {
+  color: #208bab;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 3px;
+}
+/* label.lblInput {
+  color: #1c63a0;
+  font-weight: bold;
+  margin-right: 6px;
+  display: table-column;
+  width: 50%;
+} */
+
+
+label.lblInput {
+  color: #1c63a0;
+  font-weight: bold;
+  margin-right: 6px;
+  display: inline-block;
+  width: 25%;
+  min-width: 80px;
+  max-width: 112px;
+  text-align: right;
+}
+input.txtInput {
+  color: #1c63a0;
+  margin-right: 6px;
+  display: inline-block;
+  width: 30%;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.divTable {
+  margin-top: 18px;
+  padding-top: 11px;
+}
+.divSearch {
+  background-color: #dde8e8;
+  border: 1px solid #e1e3e4;
+}
+
+
+label.lblSubEnc {
+  color: #177fd8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.divInput.divSubEnc {
+  padding-top: 9px;
+  padding-bottom: 4px;
+  text-align: center;
+}
+label#lblBuscar {
+  width: 50%;
+  max-width: 240px;
+}
